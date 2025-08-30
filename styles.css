@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --black-color: #0f0f0f;
+    --white-color: #F8F8FF;
+    --dark-gray-color: #312F30;
+    --pink-color: #BE3BB0;
+
+    --legendary-rating: #ffc402;
+    --normal-rating: #cac8bf;
+    --poop-rating: #ca5a10ad;
+
+}
+
+/* Main Styles */
+
+div,
+a,
+button {
+    transition: 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--black-color);
+    color: var(--white-color);
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+}
+
+a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 500;
+    font-size: 16px;
+
+    width: 165px;
+    height: 50px;
+
+    border-radius: 5px;
+    background-color: var(--orange-color);
+}
+
+.btn:hover {
+    opacity: 0.7;
+    cursor:default
+}
+
+.container {
+    box-sizing: border-box;
+
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.blur-container {
+    backdrop-filter: blur(5px);
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align:center
+}
+
+/* HEADER */
+
+.header {
+    margin-top: 15px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content-main {
+    width: 300px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    gap: 25px;
+
+    font-size: 20px;
+}
+
+.header-content-main img {
+    border-radius: 50px;
+}
+
+.header-list {
+    display: flex;
+    gap: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.header-text {
+    font-weight: 600;
+}
+
+/* WELCOME */
+
+.welcome {
+    margin-top: 50px;
+}
+
+.welcome .container {
+    height: 800px;
+
+    background-image: url('./images/bg-img1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 50px;
+
+    position: relative;
+}
+
+.welcome .container .blur-container {
+    height: 150px;
+}
+
+.welcome-title {
+    font-family: 'Merriweather', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+
+    padding-top: 25px;
+}
+
+
+
+.welcome-desc {
+    position: absolute;
+    bottom: 25px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align:center;
+    
+}
+
+.welcome-prod {
+    position: absolute;
+    bottom: -25px;
+    
+    font-style: italic;
+    font-weight: 100;
+}
+
+/* HIGHLIGTS */
+
+.highlights-from-concerts {
+    margin-top: 150px;
+}
+
+.highlights-concert-images {
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.highlights-card-concert {
+    width: 370px;
+    height: 500px;
+
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 25px;
+
+    position: relative;
+}
+
+.concert-berlin {
+    background-image: url("./images/banner-welcome-img1.png");
+}
+
+.concert-bunker {
+    background-image: url("./images/banner-welcome-img2.png");
+}
+
+.concert-hiroshima {
+    background-image: url("./images/banner-welcome-img3.png");
+}
+
+.highlights-card-text-wrap {
+    position: absolute;
+    top: 50px;
+    transform: perspective(2550px) rotateX(-15deg) rotateY(30deg);
+}
+
+.highlights-card-title {
+    font-size: 60px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: left;
+    backdrop-filter: blur(255px);
+    mix-blend-mode:hard-light;
+}
+
+.highlights-card-desc {
+    font-family: 'Merriweather', sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+    font-style: italic;
+    mix-blend-mode: difference;
+}
+
+.card-berlin {
+    top: 160px;
+}
+
+.card-berlin .highlights-card-desc {
+    text-align: end;
+}
+
+.card-hiroshima {
+    top: 80px;
+    left: 10px;
+}
+
+.highlights-card-concert:hover {
+    opacity: 0.5;
+    cursor: default;
+    scale: 1.05;
+}
+
+/* ABOUT */
+
+.about {
+    position: relative;
+
+    margin-top: 100px;
+}
+
+.about .about-background {
+    position: absolute;
+    z-index: -100;
+
+    mix-blend-mode: difference;
+
+    filter: blur(2px);
+    filter: contrast(1);
+}
+
+.about-desc {
+    font-family: 'Merriweather', sans-serif;
+    font-size: 25px;
+    line-height: 75px;
+    font-style: italic;
+    font-weight: 100;
+
+    margin-top: 25px;
+    border-radius: 16px;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(15, 15, 15, 0.1);
+
+    opacity: 0.7;
+    text-align: center;
+}
+
+.about-desc::first-letter {
+    color: var(--pink-color);
+    font-size: 55px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.about-img-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1px;
+
+    margin-top: 50px;
+
+}
+
+.about-card {
+    transform: perspective(2550px) rotateX(-15deg) rotateY(30deg);
+}
+
+.about-card img {
+    width: 350px;
+    height: 350px;
+
+    border-radius: 25px;
+}
+
+/* DISCOGRAPHY */
+
+.discography {
+    margin-top: 100px;
+}
+
+.container {
+
+}
+
+.discography-main-content {
+
+}
+
+.discography-title {
+
+}
+
+.discography-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    
+    margin-top: 50px;
+}
+
+.discography-card {
+    position: relative;
+    padding: 5px;
+    z-index: 100;
+}
+
+.discography-card:hover  {
+    opacity: 0.5;
+    cursor: pointer;
+    transform: perspective(2550px) rotateX(-15deg) rotateY(-30deg);
+}
+
+.discography-card.blocked-album:hover {
+    cursor:not-allowed
+}
+
+.discography-card:hover .background-plate {
+    bottom: 150px;
+    left: 150px;
+
+    z-index: 100;
+}
+
+.discography-card:hover .album-img {
+    opacity: 10;
+
+    z-index: 1000;
+}
+
+.discography-card:hover .card-unavaible-album {
+    display: block;
+}
+
+.discography-card:hover .play-icon {
+    z-index: 1000;
+    
+    opacity: 1;
+}
+
+.card-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #BE3BB0;
+    background: radial-gradient(circle, rgba(190, 59, 176, 1) 0%, rgba(15, 15, 15, 1) 90%,  rgba(15, 15, 15, 1) 100%);
+    border-radius: 15px;
+
+    padding: 50px 5px;
+    position: relative;
+    z-index: -100;
+}
+
+.card-album-img {
+    position: relative;
+}
+
+.background-plate {
+    position: absolute;
+    z-index: -100;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+
+    transition: .3s;
+}
+
+.album-img {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 25px;
+
+    position: relative;
+}
+
+.card-album-title {
+    font-size: 22px;
+    font-weight: 900;
+
+    margin-top: 25px;
+}
+
+.card-album-rating {
+    font-family: 'Merriweather', sans-serif;
+    text-transform: lowercase;
+    font-size: 18px;
+
+    margin-top: 5px;
+}
+
+.card-album-date {
+    font-family: 'Merriweather', sans-serif;
+    font-size: 14px;
+    font-style: italic;
+
+    position: absolute;
+    bottom: 5px;
+    left: 50;
+}
+
+.legendary {
+    color: var(--legendary-rating)
+}
+
+.normal {
+    color: var(--normal-rating);
+}
+
+.poop {
+    color: var(--poop-rating);
+}
+
+.card-unavaible-album {
+    position: absolute;
+    bottom: 0px;
+    z-index: 1000;
+    display: none;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+
+    height: 484px;
+
+    transition: 0s;
+}
+
+.unavaible-album-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 55px;
+
+    height: 325px;
+}
+
+.card-unavaible-album img {
+    width: 150px;
+    height: 150px;
+}
+
+.unavaible-album-title {
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+}
+
+.unavaible-album-desc {
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 100;
+    font-size: 18px;
+    text-align: center;
+
+    margin-top: 15px;
+}
+
+.blocked-mark {
+    color: red;
+}
+
+.play-icon {
+    position: absolute;
+    top: 140px;
+    left: 85px;
+    z-index: -1000;
+
+    width: 150px;
+    height: 150px;
+
+    opacity: 1;
+}
+
+.production {
+    margin-top: 100px;
+}
+
+.production-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 50px;
+
+    background-color: var(--dark-gray-color);
+    filter: blur(5px);
+    border-radius: 25px;
+}
+
+.production-wrap:hover {
+    filter: blur(0);
+}
+
+.production-wrap img {
+    width: 225px;
+    height: 225px;
+}
+
+.production-wrap:hover img {
+    animation-name: slide-in;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.production-text {
+    padding: 25px;
+}
+
+.production-about-title {
+    font-size: 55px;
+    font-weight: 900;
+}
+
+.production-about-desc {
+    font-family: 'Merriweather';
+    font-style: italic;
+
+    margin-top: 5px;
+}
+
+.footer {
+    background-color: black;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 250px;
+    padding: 50px 0;
+}
+
+.footer .container img {
+    border-radius: 25px;
+}
+
+.footer-title {
+    margin-top: 15px;
+}
+
+.footer-desc {
+    font-family: 'Merriweather';
+    font-size: 25px;
+
+    margin-top: 10px;
+}
